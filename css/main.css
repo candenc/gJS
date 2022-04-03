@@ -1,0 +1,192 @@
+@charset "UTF-8";
+/**MAPS**/
+/**Extends**/
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap; }
+
+/**Mixin**/
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+h2 {
+  text-align: center;
+  font-size: 25px;
+  text-decoration: underline; }
+
+body {
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+  background-position: right; }
+
+header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#6014a7), to(#e912ba));
+  background-image: linear-gradient(#6014a7, #e912ba);
+  color: white; }
+  header .indexBarra {
+    margin: 1%; }
+    header .indexBarra h1 .container {
+      text-align: center;
+      font-size: 20px; }
+    header .indexBarra .imagenInicial {
+      width: 65px;
+      margin-top: -1%; }
+    header .indexBarra .tamañoTexto {
+      font-size: 6px;
+      font-family: 'Roboto', sans-serif;
+      margin-top: -2%;
+      color: white; }
+  header nav {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#6014a7), to(#e912ba));
+    background-image: linear-gradient(#6014a7, #e912ba);
+    text-decoration: none;
+    margin-left: 25%;
+    margin-right: 5%;
+    margin-top: -4%;
+    color: white; }
+    header nav #navbarNav {
+      color: white;
+      font-size: 20px;
+      margin-left: 30%;
+      margin-right: 10%; }
+    header nav .navbar-nav {
+      color: white; }
+      header nav .navbar-nav .nav-item {
+        padding: 5px;
+        color: white; }
+        header nav .navbar-nav .nav-item .nav-link {
+          color: white; }
+        header nav .navbar-nav .nav-item a {
+          color: white;
+          text-decoration: none;
+          text-align: center; }
+
+footer {
+  background-image: linear-gradient(#6014a7, #e912ba);
+  color: white;
+  height: 20hv;
+  height: 140px;
+  width: 100%;
+  width: 100%;
+  align-items: center; }
+  footer p {
+    display: flex; }
+  footer ul {
+    display: flex; }
+    footer ul li {
+      list-style: none;
+      margin: 4%; }
+      footer ul li a {
+        color: #6014a7;
+        display: inline; }
+
+@media only screen and (max-width: 550px) {
+  body {
+    background-image: none; }
+  .navigator {
+    margin: 1%; }
+  footer .pageBottom {
+    list-style: none;
+    height: 60px;
+    position: absolute;
+    bottom: 0; }
+  .imagenInicial {
+    display: none; }
+  .tamañoTexto {
+    display: none; } }
+
+@media only screen and (max-width: 400px) {
+  footer ul {
+    display: flow-root;
+    font-size: x-small; } }
+
+.vidIlustrativo {
+  height: 500px; }
+
+.mainContent {
+  margin: 5%; }
+
+.alert-primary {
+  text-align: center; }
+
+.image {
+  margin-left: 25%; }
+
+.formulario {
+  text-align: center;
+  background: #6014a7;
+  padding: 15px 10px;
+  border: 20px;
+  width: 40%;
+  height: 45%;
+  box-shadow: 0px 0px 10px 6px;
+  margin-top: -8%;
+  margin-left: 50px;
+  position: sticky; }
+  .formulario .tCont {
+    margin: 10px 0;
+    font-weight: 800;
+    color: white; }
+  .formulario .form {
+    padding: 5px; }
+  .formulario .space {
+    padding: 10px;
+    color: white;
+    text-align: center; }
+
+input, textarea {
+  background: none;
+  color: rgba(255, 255, 255, 0.758);
+  font-size: 18px;
+  padding: 10px 10px 10px 5px; }
+
+.alumnos {
+  background-color: #ebd8fc;
+  color: white; }
+  .alumnos .indexBarra2 {
+    margin-bottom: 5%; }
+  .alumnos .pages {
+    list-style: none;
+    margin-left: 190vh; }
+  .alumnos .container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4%; }
+    .alumnos .container .inicioS {
+      text-align: center;
+      background: #6014a7;
+      padding: 15px 10px;
+      border-radius: 20px;
+      width: 90%;
+      height: 45%;
+      box-shadow: 0px 0px 10px 6px;
+      position: sticky;
+      margin-top: 50%; }
+      .alumnos .container .inicioS .formato {
+        padding: 5px; }
+      .alumnos .container .inicioS .space {
+        padding: 10px;
+        color: white;
+        text-align: center; }
+    .alumnos .container .inicioS2 {
+      text-align: center;
+      background: #e912ba;
+      padding: 15px 10px;
+      border-radius: 20px;
+      width: 90%;
+      height: 100%;
+      box-shadow: 0px 0px 10px 6px;
+      position: sticky;
+      margin-top: 5%; }
+      .alumnos .container .inicioS2 .formato {
+        padding: 5px; }
+      .alumnos .container .inicioS2 .space {
+        padding: 10px;
+        color: white;
+        text-align: center; }

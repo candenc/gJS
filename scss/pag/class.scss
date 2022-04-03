@@ -1,0 +1,61 @@
+.alumnos{
+    background-color:#ebd8fc ;
+    color: $colorPrincipal;
+    .indexBarra2{
+        margin-bottom:5%;
+    }
+    .pages{
+        list-style: none;
+        margin-left: 190vh;
+    
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4%;
+        .inicioS{
+            text-align:center;
+             background:#6014a7;
+             padding: 15px 10px;
+             border-radius:20px;
+             width: 90%;
+             height:45%;
+             box-shadow: 0px 0px 10px 6px ;
+            position:sticky;
+             margin-top: 50%;  
+  
+            .formato{
+                padding: 5px;
+            }
+            .space{
+                padding: 10px;
+                color: $colorPrincipal;
+                text-align: center;
+                }
+            }
+        
+            .inicioS2{
+            text-align:center;
+            background:rgb(233, 18, 186);
+             padding: 15px 10px;
+             border-radius:20px;
+             width: 90%;
+             height:100%;
+             box-shadow: 0px 0px 10px 6px ;
+            position:sticky;
+            margin-top: 5%;  
+            .formato{
+                padding: 5px;
+            }
+            .space{
+                padding: 10px;
+                color: $colorPrincipal;
+                text-align: center;
+                }
+            }
+    }
+   
+    
+
+
+}

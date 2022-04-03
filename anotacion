@@ -1,0 +1,32 @@
+// function cantDias(){
+//     let cantidadDeDias=parseInt(prompt("Ingrese la cantidad de días"));
+//     //Ejemplo: si asiste martes y jueves es $ 
+//     if (cantidadDeDias=2){
+//         cuota=1800;
+//     }//Pero si asiste lunes, martes, jueves y viernes se le suman 800
+//         else if(cantidadDeDias>=3) {
+//             adicionalPorDia=400*cantDeDias;
+//             cuota= 1800 + adicionalPorDia;
+//         }
+//     }
+// }
+
+// function mesDescuento(cuota){
+//     let actividades= parseInt(prompt("Ingrese las actividades que realiza"));
+//     while (actividades!="ninguna"){
+       
+//         switch(actividades){
+//             case "Pole": 
+            
+//             break;
+
+//             case "Entrenamiento físico personalizado": 
+            
+//         }
+//     }
+  
+   
+//     if (cuota<=1800){
+//         alert (`Este mes hay descuentos por diafestivoX. Debe abonar ${montoDescuento}`);
+//     }
+// }
