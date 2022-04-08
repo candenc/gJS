@@ -137,3 +137,36 @@ const crearFicha=()=> {
     let telefonoEmergencias=parseInt(prompt("¿Cual es tu telefono de emergencias?"));
     let direccion= parseInt(prompt("¿Cual es tu direccion de email?")) ;
 }
+
+//Declaracion de array
+let actividadesDelEstudio= ["Preparasión fizica","Pole Sport", "Pole Dance", "Floorwork", "Flexibilidad"];
+
+// Recorriendo mi array
+for (let i=0; i>actividadesDelEstudio.length;i++){
+    console.log(actividadesDelEstudio[i]);
+
+}
+
+//Metodos
+actividadesDelEstudio.push("Entrenamiento personalizado");
+console.log(actividadesDelEstudio);
+actividadesDelEstudio.shift(actividadesDelEstudio);//elimina el primer elemento.
+console.log(actividadesDelEstudio);
+actividadesDelEstudio.unshift("Preparación física");
+console.log(actividadesDelEstudio);
+
+//Join
+let listaString = actividadesDelEstudio.join(", ");
+
+//Descartar actividades del lugar:
+console.log(actividadesDelEstudio.includes("football"));
+console.log(actividadesDelEstudio.includes("Pole Sport"));
+
+
+
+//Lista de nombres de alumnos:
+let nombres=["Maria Ines", "Luciana Ramos","Lucia Villalba"];
+let cantidad=5;
+
+
+
