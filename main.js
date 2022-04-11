@@ -125,7 +125,6 @@ class Actividad {
     }
 }
 
-let alumno1= new Fichas("Candela Campagnolo","cande_",22,"candecampagnolo@hotmail.com",342503344, 342503344,"Santa Fe, Capital");
 
 const crearFicha=()=> {
     let nombreApellido=prompt("¿Cual es tu nombre?");
@@ -162,11 +161,68 @@ let listaString = actividadesDelEstudio.join(", ");
 console.log(actividadesDelEstudio.includes("football"));
 console.log(actividadesDelEstudio.includes("Pole Sport"));
 
-
+//Aplicando funciones que aceptan funciones como parámetro
+function sobreCadaPersona(array, hacer){
+    for (const persona of array){
+        hacer (persona);
+    }
+}
 
 //Lista de nombres de alumnos:
-let nombres=["Maria Ines", "Luciana Ramos","Lucia Villalba"];
+let nombres=["Maria Ines", "Luciana Ramos","Lucia Villalba", "Maria Emilia"];
 let cantidad=5;
 
+//Constructor 
+let alumno1= new Fichas("Candela Campagnolo","cande_",22,"candecampagnolo@hotmail.com",342503344, 342503344,"Santa Fe, Capital");
+let alumno2= new Fichas("Maria Ines Lupis","mariaI.1",40,"mariInes@hotmail.com",3450005340, 345607988,"Santa Fe, Capital");
+let alumno3= new Fichas("Luciana Ramos","luchi",32,"lu1Ramos@hotmail.com",353453453, 52523423423,"Santa Fe, Capital");
+let alumno4= new Fichas("Lucia Villalba","luciaV",25,"luciav@hotmail.com",42432534546, 5234234233,"Santa Fe, Capital");
+let alumno5= new Fichas("Maria Emilia Campos","mari",22,"mari@hotmail.com",42342546,250334525244,"Santa Fe, Capital");
 
+
+//Llama a la funcion creada en clases anteriores.
+//LO COMENTO PORQUE ME MOLESTA EL CARTELITO.
+// sobreCadaPersona(nombres,crearFicha);  
+sobreCadaPersona(actividadesDelEstudio, console.log);
+
+let listaActividadesPrecio = [
+    {act:"Pole Sport", precio:1800},
+    {act: "Pole Exotic", precio: 1800},
+    {act: "Acrobacia", precio: 2100},
+    {act: "Preparacion", precio: 2100},
+    {act: "Flexibilidad", precio: 2100}
+];
+
+listaActividadesPrecio.forEach(actividad=>{
+    console.log(`El valor de ${actividad. act} es ${actividad. precio}`);
+});
+
+//Busqueda y transformacion:
+let buscar = prompt("Inserte lo que desea buscar:");
+let busqueda = listaActividadesPrecio. find(persona=> {
+    return persona.actividad == buscar;
+})
+console.log(busqueda);
+
+//Filtros:
+let buscarActividades = listaActividadesPrecio.filter (act=> act.precio>1800);
+console.log (buscarActividades);
+
+//Some:
+//No existe esta actividad en la lista
+console.log(listaActividadesPrecio.some(actividad => actividad.act == "futbol"));
+
+
+//Transformacion:
+//Interés por atraso en el pago:
+let listaNueva = listaActividadesPrecio.map(actividad=> {
+    return {
+        nombre:actividad.nombre,
+        precio:actividad.precio * 0.15,
+    }
+});
+    
+console.log(listaNueva);
+
+console.log(new Date(2022,4,11));
 
