@@ -33,12 +33,22 @@ const datos=()=> {
     alumnos.push(alumnoNuevo);
 }
 
+class RegistroNuevo{
+    constructor(datoIngreso, contraseña){
+        this.datoIngreso=datoIngreso;
+        this.contraseña=contraseña;
+    }
+}
 
+const register = ()=> {
+    let datoIngreso=document.getElementById("datoIngreso");
+    let contraseñas=document.getElementById("numero");
+}
 
 
 // function cuota(){
 //     let dia = parseInt(prompt("Ingrese dia"));
-    
+        
 //     if (1<=dia && dia<=14) {
 //         alert ("Estás a término");
 //     }else if (15<dia  && dia<=31){
