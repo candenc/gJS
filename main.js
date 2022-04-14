@@ -168,6 +168,7 @@ for (let i=0; i>actividadesDelEstudio.length;i++){
 
 }
 
+
 //Metodos
 actividadesDelEstudio.push("Entrenamiento personalizado");
 console.log(actividadesDelEstudio);
@@ -191,15 +192,15 @@ function sobreCadaPersona(array, hacer){
 }
 
 // //Lista de nombres de alumnos:
-// let nombres=["Maria Ines", "Luciana Ramos","Lucia Villalba", "Maria Emilia"];
-// let cantidad=5;
+let nombres=["Maria Ines", "Luciana Ramos","Lucia Villalba", "Maria Emilia"];
+let cantidad=5;
 
-// //Constructor 
-// let alumno1= new Fichas("Candela Campagnolo","cande_",22,"candecampagnolo@hotmail.com",342503344, 342503344,"Santa Fe, Capital");
-// let alumno2= new Fichas("Maria Ines Lupis","mariaI.1",40,"mariInes@hotmail.com",3450005340, 345607988,"Santa Fe, Capital");
-// let alumno3= new Fichas("Luciana Ramos","luchi",32,"lu1Ramos@hotmail.com",353453453, 52523423423,"Santa Fe, Capital");
-// let alumno4= new Fichas("Lucia Villalba","luciaV",25,"luciav@hotmail.com",42432534546, 5234234233,"Santa Fe, Capital");
-// let alumno5= new Fichas("Maria Emilia Campos","mari",22,"mari@hotmail.com",42342546,250334525244,"Santa Fe, Capital");
+//Constructor 
+let alumno1= new Fichas("Candela Campagnolo","cande_",22,"candecampagnolo@hotmail.com",342503344, 342503344,"Santa Fe, Capital");
+let alumno2= new Fichas("Maria Ines Lupis","mariaI.1",40,"mariInes@hotmail.com",3450005340, 345607988,"Santa Fe, Capital");
+let alumno3= new Fichas("Luciana Ramos","luchi",32,"lu1Ramos@hotmail.com",353453453, 52523423423,"Santa Fe, Capital");
+let alumno4= new Fichas("Lucia Villalba","luciaV",25,"luciav@hotmail.com",42432534546, 5234234233,"Santa Fe, Capital");
+let alumno5= new Fichas("Maria Emilia Campos","mari",22,"mari@hotmail.com",42342546,250334525244,"Santa Fe, Capital");
 
 
 // //Llama a la funcion creada en clases anteriores.
