@@ -52,13 +52,13 @@ console.log(botones1);
 const reg=document.getElementById("datoIngreso");
 const num=document.getElementById("numero");
 reg.onkeydown=()=>{
-    console.log(botones1.value);
+    console.log(reg.value);
 }
-num.onkeydown=()=>{
+num.onkeydown =()=>{
     console.log(num.value);
 }
 botones1.onclick=()=>{
-    console.log(reg.value);
+    console.log(botones1.value);
 }
 
 const nombreyApellido=document.getElementById("nomApe");
@@ -71,28 +71,28 @@ const telEmergencias = parseInt(document.getElementById("telEmer"));
 const direccion= parseInt(document.getElementById("dir"));
 
 nomApe.onkeydown=()=>{
-    console.log(reg.value);
+    console.log(nomApe.value);
 }
 userName.onkeydown=()=>{
-    console.log(reg.value);
+    console.log(userName.value);
 }
 edad.onkeydown=()=>{
-    console.log(reg.value);
+    console.log(edad.value);
 }
 DNI.onkeydown=()=>{
-    console.log(reg.value);
+    console.log(DNI.value);
 }
 mail.onkeydown=()=>{
-    console.log(reg.value);
+    console.log(mail.value);
 }
 Telefono.onkeydown=()=>{
-    console.log(reg.value);
+    console.log(Telefono.value);
 }
 telEmer.onkeydown=()=>{
-    console.log(reg.value);
+    console.log(telEmer.value);
 }
 dir.onkeydown=()=>{
-    console.log(reg.value);
+    console.log(dir.value);
 }
 
 const botones2= document.querySelector("#btnContactar");
