@@ -73,6 +73,16 @@ const direccion= parseInt(document.getElementById("dir"));
 nomApe.onkeydown=()=>{
     console.log(nomApe.value);
 }
+
+nombreyApellido.addEventListener("input", ()=>{
+    if (nomApe.value=="") {
+        nombreyApellido.nomApe= "vacio";
+        console.log("Esto no me sirve");
+    } else{
+        nombreyApellido.nomApe="validado"
+    }
+})
+
 userName.onkeydown=()=>{
     console.log(userName.value);
 }
@@ -100,6 +110,7 @@ botones2.onclick=()=>{
     console.log(botones2.value);
 }
 
+
 // function cuota(){
 //     let dia = parseInt(prompt("Ingrese dia"));
         
@@ -112,19 +123,19 @@ botones2.onclick=()=>{
 //     }
 // }
 
-function consultar(){
-    let dia=parseInt(prompt("Ingrese dia"));
+// function consultar(){
+//     let dia=parseInt(prompt("Ingrese dia"));
    
 
-    if (1<=dia && dia<=15){
-        alert ("Estás a término. Usted debe abonar $2300");
-    } else if (15<dia  && dia<31){
-        let cuentaVencida=2300+(2300*0.15);
-        alert (`Ups! Excediste la fecha límite. Usted debe abonar ${cuentaVencida}`);   
-    } else{
-        alert("No está dentro del calendario");
-    }
-}
+//     if (1<=dia && dia<=15){
+//         alert ("Estás a término. Usted debe abonar $2300");
+//     } else if (15<dia  && dia<31){
+//         let cuentaVencida=2300+(2300*0.15);
+//         alert (`Ups! Excediste la fecha límite. Usted debe abonar ${cuentaVencida}`);   
+//     } else{
+//         alert("No está dentro del calendario");
+//     }
+// }
 
 
 // function bienvenida(){
