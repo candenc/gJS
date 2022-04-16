@@ -57,7 +57,8 @@ reg.onkeydown=()=>{
 num.onkeydown =()=>{
     console.log(num.value);
 }
-botones1.onclick=()=>{
+botones1.onclick=(e)=>{
+    e.preventDefault();
     console.log(botones1.value);
 }
 
@@ -106,7 +107,8 @@ dir.onkeydown=()=>{
 }
 
 const botones2= document.querySelector("#btnContactar");
-botones2.onclick=()=>{
+botones2.onclick=(e)=>{
+    e.preventDefault();
     console.log(botones2.value);
 }
 
