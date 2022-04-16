@@ -46,7 +46,59 @@ const register = ()=> {
     let datoIngreso=document.getElementById("datoIngreso");
     let contraseñas=document.getElementById("numero");
 }
+//EVENTOS ASOCIADOS
+const botones1= document.querySelector("#botonRegistro");
+console.log(botones1);
+const reg=document.getElementById("datoIngreso");
+const num=document.getElementById("numero");
+reg.onkeydown=()=>{
+    console.log(botones1.value);
+}
+num.onkeydown=()=>{
+    console.log(num.value);
+}
+botones1.onclick=()=>{
+    console.log(reg.value);
+}
 
+const nombreyApellido=document.getElementById("nomApe");
+const usuario=document.getElementById("userName");
+const edad= parseInt(document.getElementById("edad"));
+const dni=parseInt(document.getElementById("DNI"));
+const email=document.getElementById("mail");
+const telefono=parseInt(document.getElementById("Telefono"));
+const telEmergencias = parseInt(document.getElementById("telEmer"));
+const direccion= parseInt(document.getElementById("dir"));
+
+nomApe.onkeydown=()=>{
+    console.log(reg.value);
+}
+userName.onkeydown=()=>{
+    console.log(reg.value);
+}
+edad.onkeydown=()=>{
+    console.log(reg.value);
+}
+DNI.onkeydown=()=>{
+    console.log(reg.value);
+}
+mail.onkeydown=()=>{
+    console.log(reg.value);
+}
+Telefono.onkeydown=()=>{
+    console.log(reg.value);
+}
+telEmer.onkeydown=()=>{
+    console.log(reg.value);
+}
+dir.onkeydown=()=>{
+    console.log(reg.value);
+}
+
+const botones2= document.querySelector("#btnContactar");
+botones2.onclick=()=>{
+    console.log(botones2.value);
+}
 
 // function cuota(){
 //     let dia = parseInt(prompt("Ingrese dia"));
@@ -310,16 +362,4 @@ console.log(formularios.innerHTML);
 
 //   });
 
-const botones= document.querySelector("#botonRegistro");
-console.log(botones);
-const reg=document.getElementById("datoIngreso");
-const num=document.getElementById("numero");
-
-reg.onkeydown=()=>{
-    console.log(reg.value);
-}
-num.onkeydown=()=>{
-    console.log(num.value);
-}
-// botones.onclick()
 
