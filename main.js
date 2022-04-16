@@ -3,6 +3,8 @@
 //     let apellido= prompt("Ingrese su nombre y apellido");
 //     let DNI= parseInt(prompt("Ingresar DNI"));
 //     alert ("Bienvenida/o " + nombre + apellido);    
+
+
 // }
 class Persona{
     constructor(nombreyApellido, usuario, edad, dni, email,telefono, telEmergencias, direccion){
@@ -58,19 +60,19 @@ const register = ()=> {
 //     }
 // }
 
-// function consultar(){
-//     let dia=parseInt(prompt("Ingrese dia"));
+function consultar(){
+    let dia=parseInt(prompt("Ingrese dia"));
    
 
-//     if (1<=dia && dia<=15){
-//         alert ("Estás a término. Usted debe abonar $2300");
-//     } else if (15<dia  && dia<31){
-//         let cuentaVencida=2300+(2300*0.15);
-//         alert (`Ups! Excediste la fecha límite. Usted debe abonar ${cuentaVencida}`);   
-//     } else{
-//         alert("No está dentro del calendario");
-//     }
-// }
+    if (1<=dia && dia<=15){
+        alert ("Estás a término. Usted debe abonar $2300");
+    } else if (15<dia  && dia<31){
+        let cuentaVencida=2300+(2300*0.15);
+        alert (`Ups! Excediste la fecha límite. Usted debe abonar ${cuentaVencida}`);   
+    } else{
+        alert("No está dentro del calendario");
+    }
+}
 
 
 // function bienvenida(){
@@ -275,4 +277,49 @@ console.log(document.querySelectorAll("div > input"));//el div con hijo input
 
 let formularios=document.querySelector("form");
 console.log(formularios.innerHTML);
+
+//Definición de eventos":
+// const imagen=document.querySelector("foto");
+// const bton=document.getElementById("btn");
+// const par=document.querySelector("parrafo");
+
+// const visibilidad={
+//     mostrar:true,
+// }
+
+// function torf(){
+//     if (visibilidad.mostrar){
+//         visibilidad.style.opacity=0;
+//         visibilidad.mostrar=false;
+//     }else{
+//         visibilidad.style.opacity=1;
+//         visibilidad.mostrar=true;
+//     }
+// }
+
+// bton.onclick =() => {
+//    torf();
+// }
+// $(document).ready(function() {
+//     $('#boton').on('click', function() {
+
+//       var imagen = document.getElementById('foto');
+//       imagen.style.display = 'none';
+
+//     });
+
+//   });
+
+const botones= document.querySelector("#botonRegistro");
+console.log(botones);
+const reg=document.getElementById("datoIngreso");
+const num=document.getElementById("numero");
+
+reg.onkeydown=()=>{
+    console.log(reg.value);
+}
+num.onkeydown=()=>{
+    console.log(num.value);
+}
+// botones.onclick()
 
