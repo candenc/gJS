@@ -190,3 +190,23 @@ input, textarea {
         padding: 10px;
         color: white;
         text-align: center; }
+
+.cont {
+  background: #e912a9;
+  padding: 10px 5px;
+  border-radius: 10px;
+  width: 15%;
+  height: 70%;
+  box-shadow: 0px 0px 10px 6px;
+  position: sticky;
+  margin-top: 5%; }
+  .cont .parrafo {
+    color: black; }
+  .cont .foto {
+    width: 150px;
+    margin-top: -700%;
+    margin-left: 2%; }
+  .cont .btn {
+    color: #cdcad0;
+    background-color: #6014a7;
+    margin-left: 30%; }
