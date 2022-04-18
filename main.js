@@ -343,25 +343,26 @@ console.log(document.querySelectorAll("div > input"));//el div con hijo input
 let formularios=document.querySelector("form");
 console.log(formularios.innerHTML);
 
-// //Definición de eventos:
-// const aJugador={
-//     mostrar:true
-// }
+//Definición de eventos:
+const aJugador={
+    mostrar:true
+}
+console.log(aJugador);
 // //SIN LA "S" NO ME LO TOMA:
-// const btn=document.getElementsByClassName("btn");
-// console.log(btn);
-// const foto=document.getElementsByClassName("foto");
-// console.log(foto);
+const btn=document.getElementsByClassName("btn");
+console.log(btn);
+const foto=document.getElementsByClassName("foto");
+console.log(foto);
 
-// btn.onclick = () => {
-//     if(aJugador.mostrar){
-//        foto.style.display="block";
-//         mostrar=false;
-//     } else {
-//         foto.style.display="none";
-//         mostrar=true;
-//     }
-// }
+btn.onclick = () => {
+    if(aJugador.mostrar){
+       foto.style.display="block";
+        aJugador.mostrar=false;
+    } else {
+        foto.style.display="none";
+        aJugador.mostrar=true;
+    }
+}
 
 
 
