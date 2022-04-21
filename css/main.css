@@ -191,7 +191,7 @@ input, textarea {
         color: white;
         text-align: center; }
 
-.cont {
+#cont {
   background: #e912a9;
   padding: 10px 5px;
   border-radius: 10px;
@@ -200,13 +200,13 @@ input, textarea {
   box-shadow: 0px 0px 10px 6px;
   position: sticky;
   margin-top: 5%; }
-  .cont .parrafo {
+  #cont .parrafo {
     color: black; }
-  .cont .foto {
+  #cont .foto {
     width: 150px;
     margin-top: -700%;
     margin-left: 2%; }
-  .cont .btn {
+  #cont #btn {
     color: #cdcad0;
     background-color: #6014a7;
     margin-left: 30%; }

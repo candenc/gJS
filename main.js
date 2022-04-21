@@ -1,11 +1,3 @@
-// function datos(){
-//     let nombre= prompt("Ingrese su nombre y apellido");
-//     let apellido= prompt("Ingrese su nombre y apellido");
-//     let DNI= parseInt(prompt("Ingresar DNI"));
-//     alert ("Bienvenida/o " + nombre + apellido);    
-
-
-// }
 class Persona{
     constructor(nombreyApellido, usuario, edad, dni, email,telefono, telEmergencias, direccion){
         this.nombreyApellido=nombreyApellido;
@@ -18,9 +10,10 @@ class Persona{
         this.direccion=direccion;
     }
 }
-let alumnos= [];
 
-const datos=()=> {
+const alumnos= [];
+
+const datosAlumnado= () => {
     let nombreyApellido=document.getElementById("nomApe");
     let usuario=document.getElementById("userName");
     let edad= parseInt(document.getElementById("edad"));
@@ -31,21 +24,29 @@ const datos=()=> {
     let direccion= parseInt(document.getElementById("dir"));
 
 
-    let alumnoNuevo= new Persona (nombreyApellido, usuario, edad, dni, email,telefono, telEmergencias, direccion)
+    let alumnoNuevo= new Persona (nombreyApellido, usuario, edad, dni, email,telefono, telEmergencias, direccion);
     alumnos.push(alumnoNuevo);
+    localStorage.setItem("alum",JSON.stringify(alumnos));
+    
+   
 }
 
 class RegistroNuevo{
-    constructor(datoIngreso, contraseña){
+    constructor(datoIngreso, contrasenia){
         this.datoIngreso=datoIngreso;
-        this.contraseña=contraseña;
+        this.contraseña=contrasenia;
     }
 }
 
 const register = ()=> {
     let datoIngreso=document.getElementById("datoIngreso");
-    let contraseñas=document.getElementById("numero");
+    let contrasenias=document.getElementById("numero");
+    
+    let local= new RegistroNuevo(datoIngreso, contrasenias);
+    alumnos.push(alumnoNuevo);
+    sessionStorage.setItem("alum",JSON.stringify(alumnos));
 }
+
 //EVENTOS ASOCIADOS
 const botones1= document.querySelector("#botonRegistro");
 console.log(botones1);
@@ -113,106 +114,6 @@ botones2.onclick=(e)=>{
 }
 
 
-// function cuota(){
-//     let dia = parseInt(prompt("Ingrese dia"));
-        
-//     if (1<=dia && dia<=14) {
-//         alert ("Estás a término");
-//     }else if (15<dia  && dia<=31){
-//         alert ("Ups! Excediste la fecha límite. Se abonará la cuota con un recargo del 15%");
-//     }else{
-//         alert("No está dentro del calendario");
-//     }
-// }
-
-// function consultar(){
-//     let dia=parseInt(prompt("Ingrese dia"));
-   
-
-//     if (1<=dia && dia<=15){
-//         alert ("Estás a término. Usted debe abonar $2300");
-//     } else if (15<dia  && dia<31){
-//         let cuentaVencida=2300+(2300*0.15);
-//         alert (`Ups! Excediste la fecha límite. Usted debe abonar ${cuentaVencida}`);   
-//     } else{
-//         alert("No está dentro del calendario");
-//     }
-// }
-
-
-// function bienvenida(){
-//     alert("¡BIENVENIDA/O! ¿Eres alumno?");
-//     let inscripto=prompt("Validar si o no");
-    
-//     while (inscripto != "salir"){
-//         switch (inscripto){
-//             case "si":
-//                 datos();
-//             break;
-    
-//             case "no":
-//             alert ("¡Te esperamos!");
-//             break;
-    
-//             default:
-//             alert("Ups! Vuelve a intentar o sigue explorando.");
-//             break
-//         }
-//     }
-// }
-
-
-// function opcionesIniciales(){
-//     let entrada= prompt("Ingresar opcion.");
-//     while (entrada != "Fin"){
-//        switch (entrada){
-//            case "1"://Saber si se está dentro de la fecha límite
-//            cuota();
-//            break;
-    
-//             case "2":
-//             consultar();//Saber cuánto debo abonar una vez aplicado el porcentaje extra.
-//             break;
-    
-//             case "3": //Anotarse
-//             datos();
-//             alert ("¡No te olvides reservar un horario!");
-//             break;
-    
-//             default:
-//             alert("Quizás deberías consultar con nuestra secretaria");
-//             break
-//         }
-//     }
-    
-// }
-
-
-// //Detalles del alumno en objeto
-// let fichaAlumno={
-    
-// nombreApellido:"Candela Campagnolo",
-// nombreUsuario: "cande_",
-// edad:22,
-// DNI:42423304,
-// email:"candecampagnolo@hotmail.com",
-// telefono: 342503344,
-// telefonoEmergencias: 342503344,
-// direccion: "Santa Fe, Capital",
-// }
-
-// //Actividad e inactividad
-// let asistenciaAlumno={
-//     fichaActiva: false,
-//     DNI:42423304,
-//     asistencia: true,
-// }
-// //la ficha permaneció inactiva unos meses, pero el alumno volvió
-// asistenciaAlumno.fichaActiva=true;
-
-// //constructor puedo agregar tooooooodos los alumnos
-
-
 class Fichas {
     constructor(nombreApellido, nombreUsuario, edad, DNI, email, telefono, telefonoEmergencias, direccion) {
         this.nombreApellido = nombreApellido;
@@ -272,61 +173,12 @@ function sobreCadaPersona(array, hacer){
 let nombres=["Maria Ines", "Luciana Ramos","Lucia Villalba", "Maria Emilia"];
 let cantidad=5;
 
-//Constructor 
-let alumno1= new Fichas("Candela Campagnolo","cande_",22,"candecampagnolo@hotmail.com",342503344, 342503344,"Santa Fe, Capital");
-let alumno2= new Fichas("Maria Ines Lupis","mariaI.1",40,"mariInes@hotmail.com",3450005340, 345607988,"Santa Fe, Capital");
-let alumno3= new Fichas("Luciana Ramos","luchi",32,"lu1Ramos@hotmail.com",353453453, 52523423423,"Santa Fe, Capital");
-let alumno4= new Fichas("Lucia Villalba","luciaV",25,"luciav@hotmail.com",42432534546, 5234234233,"Santa Fe, Capital");
-let alumno5= new Fichas("Maria Emilia Campos","mari",22,"mari@hotmail.com",42342546,250334525244,"Santa Fe, Capital");
-
-
-// //Llama a la funcion creada en clases anteriores.
-// //LO COMENTO PORQUE ME MOLESTA EL CARTELITO.
-// // sobreCadaPersona(nombres,crearFicha);  
-// sobreCadaPersona(actividadesDelEstudio, console.log);
-
-// let listaActividadesPrecio = [
-//     {act:"Pole Sport", precio:1800},
-//     {act: "Pole Exotic", precio: 1800},
-//     {act: "Acrobacia", precio: 2100},
-//     {act: "Preparacion", precio: 2100},
-//     {act: "Flexibilidad", precio: 2100}
-// ];
-
-// listaActividadesPrecio.forEach(actividad=>{
-//     console.log(`El valor de ${actividad. act} es ${actividad. precio}`);
-// });
-
-// //Busqueda y transformacion:
-// let buscar = prompt("Inserte lo que desea buscar:");
-// let busqueda = listaActividadesPrecio. find(persona=> {
-//     return persona.actividad == buscar;
-// })
-// console.log(busqueda);
-
-// //Filtros:
-// let buscarActividades = listaActividadesPrecio.filter (act=> act.precio>1800);
-// console.log (buscarActividades);
-
-// //Some:
-// //No existe esta actividad en la lista
-// console.log(listaActividadesPrecio.some(actividad => actividad.act == "futbol"));
-
-
-// //Transformacion:
-// //Interés por atraso en el pago:
-// let listaNueva = listaActividadesPrecio.map(actividad=> {
-//     return {
-//         nombre:actividad.nombre,
-//         precio:actividad.precio * 0.15,
-//     }
-// });
-    
-// console.log(listaNueva);
-
-console.log(new Date(2022,4,11));
-
-//Acceder al DOM:
+// //Constructor 
+// let alumno1= new Fichas("Candela Campagnolo","cande_",22,"candecampagnolo@hotmail.com",342503344, 342503344,"Santa Fe, Capital");
+// let alumno2= new Fichas("Maria Ines Lupis","mariaI.1",40,"mariInes@hotmail.com",3450005340, 345607988,"Santa Fe, Capital");
+// let alumno3= new Fichas("Luciana Ramos","luchi",32,"lu1Ramos@hotmail.com",353453453, 52523423423,"Santa Fe, Capital");
+// let alumno4= new Fichas("Lucia Villalba","luciaV",25,"luciav@hotmail.com",42432534546, 5234234233,"Santa Fe, Capital");
+// let alumno5= new Fichas("Maria Emilia Campos","mari",22,"mari@hotmail.com",42342546,250334525244,"Santa Fe, Capital");
 //Mediante clases:
 console.log(document.getElementsByClassName("indexBarra"));
 
@@ -343,26 +195,32 @@ console.log(document.querySelectorAll("div > input"));//el div con hijo input
 let formularios=document.querySelector("form");
 console.log(formularios.innerHTML);
 
+
 //Definición de eventos:
-const aJugador={
+const aUser={
     mostrar:true
 }
-console.log(aJugador);
+console.log(aUser);
 // //SIN LA "S" NO ME LO TOMA:
-const btn=document.getElementsByClassName("btn");
+const btn=document.getElementById("btn");
 console.log(btn);
 const foto=document.getElementsByClassName("foto");
 console.log(foto);
 
+function mostrar(){
+   foto[0].style.display="block";
+
+}
+function ocultar(){
+  foto[0].style.display="none";
+  
+}
 btn.onclick = () => {
-    if(aJugador.mostrar){
-       foto.style.display="block";
-        aJugador.mostrar=false;
+    if (aUser.mostrar){
+        ocultar();
+        aUser.mostrar=false;
     } else {
-        foto.style.display="none";
-        aJugador.mostrar=true;
+        mostrar();
+        aUser.mostrar=true;
     }
 }
-
-
-
