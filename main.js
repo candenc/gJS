@@ -42,9 +42,9 @@ const register = ()=> {
     let datoIngreso=document.getElementById("datoIngreso");
     let contrasenias=document.getElementById("numero");
     
-    let local= new RegistroNuevo(datoIngreso, contrasenias);
-    alumnos.push(alumnoNuevo);
-    sessionStorage.setItem("alum",JSON.stringify(alumnos));
+    let registro= new RegistroNuevo(datoIngreso, contrasenias);
+    alumnos.push(registro);
+    sessionStorage.setItem("alum",JSON.stringify(registro));
 }
 
 //EVENTOS ASOCIADOS
