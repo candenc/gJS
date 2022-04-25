@@ -191,6 +191,10 @@ input, textarea {
   background: #e912a9;
   display: flex; }
 
+.promo {
+  width: 300px;
+  height: 200px; }
+
 .alumnos {
   background-color: #ebd8fc;
   color: white; }
