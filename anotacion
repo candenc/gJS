@@ -195,7 +195,23 @@ console.log(new Date(2022,4,11));
 //Acceder al DOM:
 
 
+function mostrar(){
+   foto[0].style.display="block";
 
+}
+function ocultar(){
+  foto[0].style.display="none";
+  
+}
+btn.onclick = () => {
+    if (aUser.mostrar){
+        ocultar();
+        aUser.mostrar=false;
+    } else {
+        mostrar();
+        aUser.mostrar=true;
+    }
+}
 
 
 
