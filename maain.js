@@ -19,12 +19,13 @@ const guardarContacto = () => {
 
     let nuevoContacto= new GuardarRegistro(nomb, anios, email,escribir);
     arrayContacto.push(nuevoContacto);
-        
-        
-    // localStorage.setItem("botonContactar",JSON.stringify(botonContactar));
-    // }
-};
+           
+    localStorage.setItem("botonContactar",JSON.stringify(botonContactar));
+
     
+};
+
+
 const botonContactar=document.getElementById("botonContactar");
 botonContactar.addEventListener("click", ()=>{
     guardarContacto();
@@ -85,12 +86,12 @@ let promo3=0.20;
 let promo4=0.30;
 
 let botonA1=document.getElementById("botonA");
-
 botonA1.addEventListener("click",(e)=>{
     e.preventDefault(),
     console.log(botonA1),
     sessionStorage.setItem("boton1",JSON.stringify(botonA1))
 })
+
 let botonA2=document.getElementById("botonA1");
 botonA2.onclick=(e)=>{
     e.preventDefault();
@@ -103,18 +104,23 @@ botonA3.onclick=(e)=>{
     sessionStorage.setItem("boton3",JSON.stringify(botonA3));
  
 }
-let botonA4=document.getElementById("botonA3");
-botonA4.onclick=(e)=>{
-    e.preventDefault();
-    sessionStorage.setItem("boton4",JSON.stringify(botonA4));
+// let botonA4=document.getElementById("botonA3");
+// botonA4.onclick=(e)=>{
+//     e.preventDefault();
+//     sessionStorage.setItem("boton4",JSON.stringify(botonA4));
  
+// }
+
+//Para comprar promos, certificaciones, etc:
+//Comprar promociones o talleres.
+let compras;
+let comprasLocal=JSON.parse(localStorage.getItem("compras"));
+
+if (comprasLocal){
+    compras=comprasLocal;
+}else{
+    compras=[];
 }
-
-
-
-
-
-
 
 
 
