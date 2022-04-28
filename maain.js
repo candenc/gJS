@@ -22,6 +22,17 @@ const guardarContacto = () => {
            
     localStorage.setItem("botonContactar",JSON.stringify(botonContactar));
 
+    if( localStorage.getItem("contactoss") !=null){
+        arrayContacto=JSON.localStorage.getItem("contactoss");
+        arrayContacto.push(nuevoContacto);
+        localStorage.setItem("contactoss", JSON.stringify(arrayContacto));}
+        else   {
+
+        arrayContacto.push(nuevoContacto);
+        localStorage.setItem("contactoss",JSON.stringify(arrayContacto));
+    }
+    arrayContacto.push(nuevoContacto);
+    return nuevoContacto;
     
 };
 
@@ -39,7 +50,6 @@ class GuardarInicio{
         this.identificarmail=identificarmail;
         this.contrasenia=contrasenia;
   
-    
     }
 }
 
@@ -88,8 +98,9 @@ let promo4=0.30;
 let botonA1=document.getElementById("botonA");
 botonA1.addEventListener("click",(e)=>{
     e.preventDefault(),
-    console.log(botonA1),
-    sessionStorage.setItem("boton1",JSON.stringify(botonA1))
+    sessionStorage.setItem("boton1",JSON.stringify(botonA1)),
+    console.log(botonA1)
+   
 })
 
 let botonA2=document.getElementById("botonA1");
@@ -113,14 +124,26 @@ botonA3.onclick=(e)=>{
 
 //Para comprar promos, certificaciones, etc:
 //Comprar promociones o talleres.
-let compras;
-let comprasLocal=JSON.parse(localStorage.getItem("compras"));
+const carritoCompras=[];
 
-if (comprasLocal){
-    compras=comprasLocal;
-}else{
-    compras=[];
+const carrito=document.getElementById("carrito");
+
+carrito.onclick=(e)=>{
+    e.preventDefault();
+    localStorage.setItem("carrito",JSON.stringify(carrito));
+
 }
+if (carrito.lenght===0 && console.log("El carrito está vacío"));
+
+let estadoCompras=JSON.parse(localStorage.getItem("carrito"));
+
+if (estadoCompras){
+    carrito=estadoCompras
+}else{
+    carritoCompras;
+}
+
+
 
 
 
