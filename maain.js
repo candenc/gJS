@@ -109,18 +109,14 @@ botonA2.onclick=(e)=>{
     sessionStorage.setItem("boton2",JSON.stringify(botonA2));
  
 }
+
 let botonA3=document.getElementById("botonA2");
 botonA3.onclick=(e)=>{
     e.preventDefault();
     sessionStorage.setItem("boton3",JSON.stringify(botonA3));
  
 }
-// let botonA4=document.getElementById("botonA3");
-// botonA4.onclick=(e)=>{
-//     e.preventDefault();
-//     sessionStorage.setItem("boton4",JSON.stringify(botonA4));
- 
-// }
+
 
 //Para comprar promos, certificaciones, etc:
 //Comprar promociones o talleres.
@@ -143,9 +139,9 @@ if (estadoCompras){
     carritoCompras;
 }
 
+const botonPase=document.getElementById("botonPase");
 
-
-
-
-
-
+botonPase.onclick=(e)=> {
+    e.preventDefault();
+    swal("¡Bienvenidos!");
+}

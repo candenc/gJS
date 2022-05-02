@@ -1,6 +1,5 @@
 {
   "name": "trabajofinal",
-  "description": "",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
@@ -271,6 +270,7 @@
     "strip-json-comments": "^2.0.1",
     "supports-color": "^7.2.0",
     "supports-preserve-symlinks-flag": "^1.0.0",
+    "sweetalert": "^2.1.2",
     "tar": "^6.1.11",
     "to-readable-stream": "^1.0.0",
     "to-regex-range": "^5.0.1",
@@ -304,5 +304,6 @@
     "yallist": "^4.0.0",
     "yargs": "^17.3.1",
     "yargs-parser": "^20.2.9"
-  }
+  },
+  "description": ""
 }
