@@ -22,6 +22,10 @@ const guardarContacto = () => {
            
     localStorage.setItem("botonContactar",JSON.stringify(botonContactar));
 
+    fetch("prueba2.txt")
+    .then(response=>response.text())
+    .catch(error=>console.log(error))
+    
     if( localStorage.getItem("contactoss") !=null){
         arrayContacto=JSON.localStorage.getItem("contactoss");
         arrayContacto.push(nuevoContacto);
@@ -33,6 +37,7 @@ const guardarContacto = () => {
     }
     arrayContacto.push(nuevoContacto);
     return nuevoContacto;
+    
     
 };
 
@@ -60,6 +65,10 @@ const guardarInicio=()=>{
     let identificarmail=document.getElementById("datoIngreso").value;
     let contrasenia=document.getElementById("numero").value;
   
+
+    fetch("prueba.txt")
+    .then(result=> console.log(result))
+    .catch(error=>console.log(error))
 })
 }
 const botonInicio=document.getElementById("botonInicio");
