@@ -226,10 +226,4 @@ function updatePrice() {
     document.querySelector(".cart-quantity").textContent=productRows.length;
 }
 
-const comprarrBoton=document.getElementsByClassName("purchasebtn");
 
-comprarrBoton=document.addEventListener("click",()=>{
-    console.log("haz clickeado");
-    swal("Gracias por comprar");
-}
-)
