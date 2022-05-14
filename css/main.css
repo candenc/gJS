@@ -174,7 +174,7 @@ footer {
   transition: .5s ease-out; }
 
 .cart-modal-overlay.open {
-  transform: translateY(-50%);
+  transform: translateY(200%);
   transform: translateX(-5%); }
 
 .cart-modal {

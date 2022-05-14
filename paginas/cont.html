@@ -27,7 +27,7 @@
       <section class="indexBarra" >
         <h1 class="container">Devant Pole Fitness Studio</h1>
         <p class="tamañoTexto"> POLE DANCE STUDIO</p> <img src="../imagenes/Logo1.jfif" alt="LOGOS DE PAGINAS" class="imagenInicial">
-        <a href=""><i class="fas fa-shopping-cart" id="carrito"></i></a>
+       
       </section>
       <nav class="navbar navbar-expand-lg navbar-light bg-light navigator">
         <a class="navbar-brand" href="./index.html"></a>
@@ -41,16 +41,100 @@
             </li>
            
            <li class="nav-item">
-              <a class="nav-link" href="contacto.html">CONTACTO</a>
+              <a class="nav-link" href="cont.html">CONTACTO</a>
             </li>
-              <li class="nav-item"><a class="nav-link" href="classroom.html">MI CUENTA</a></li>    
+              <li class="nav-item"><a class="nav-link" href="#">MI CUENTA</a></li>    
           </ul>
             
         </div>
       </nav>
   </header>
 
-  
+      
+<!--  cart modal  -->
+<div class="cart-modal-overlay">
+  <div class="cart-modal">
+    <i id="close-btn" class="fas fa-times"></i>
+      <h1 class="cart-is-empty">El carrito esta vacio</h1>
+    
+      <div class="product-rows">
+      </div>
+      <div class="total">
+        <h1 class="cart-total">TOTAL</h1>
+          <span class="total-price">$0</span>
+            <button class="purchasebtn">COMPRAR</button>
+      </div>
+    </div>
+  </div>
+
+<!--   end of cart modal -->
+<a class="cart-btn">
+<i id="cart" class="fas fa-shopping-cart"></i>
+<span class ="cart-quantity">0</span>
+</a>
+
+
+<!--  products  -->
+<div>
+  <div class="items-container">
+    <div class="card-1 card" id="item1">
+    
+    <img class="product-image" src="../imagenes/gim1.png" alt="">
+    <h3>PASE LIBRE</h3> 
+    <p> Queremos que permanezcas en el equipo. Por eso te dejamos estos packs. Contratando el servicio del gimnasio por 3 meses solo abonas por mes  </p>
+    <button class="add-to-cart">Comprar</button>
+    <span class="product-price">$4320</span>
+    </div>
+    <div class="card-2 card" id="item2">
+    
+    <img class="product-image" src="../imagenes/gim2.png" alt="">
+    <h3>PASE LIBRE </h3>
+    <p> Queremos que permanezcas en el equipo. Por eso te dejamos estos packs. Contratando el servicio del gimnasio por 6 meses solo abonas por mes  </p>
+    <button class="add-to-cart">Comprar</button>
+    <span class="product-price">$3800</span>
+    </div>
+    <div class="card-3 card" id="item3">
+    
+    <img class="product-image" src="../imagenes/gim3.png" alt="">
+    <h3>PASE LIBRE</h3>
+    <p> Queremos que permanezcas en el equipo. Por eso te dejamos estos packs. Contratando el servicio del gimnasio por 8 meses solo abonas por mes  </p>
+    <button class="add-to-cart">Comprar</button>
+    <span class="product-price">$3300</span>
+    </div>
+    </div>
+    
+</div>
+<div>
+  <div class="items-container">
+    <div class="card-1 card" id="item1">
+    
+    <img class="product-image" src="../imagenes/post.png" alt="">
+    <h3>TALLER DE ACROBACIAS</h3> 
+    <button class="add-to-cart">Comprar</button>
+    <span class="product-price">$3500</span>
+    </div>
+    <div class="card-2 card" id="item2">
+    
+    <img class="product-image" src="../imagenes/post2.png" alt="">
+    <h3>CERTIFICACIÓN DE EXOTIC </h3>
+    <button class="add-to-cart">Comprar</button>
+    <span class="product-price">$15000</span>
+    </div>
+    <div class="card-3 card" id="item3">
+    
+    <img class="product-image" src="../imagenes/post3.png" alt="">
+    <h3>CURSO DE POLE SPORT</h3>
+    <p>Capacitate con profesionales, adquirí técnica y nuevas metodologías, aprendé un poco más de esta maravillosa disciplina</p>
+    <button class="add-to-cart">Comprar</button>
+    <span class="product-price">$4500</span>
+    </div>
+    </div>
+    
+</div>
+
+
+<!--  end of products  -->
+
    
   <div class="alert alert-primary" role="alert">
     Si queres formar parte de nuestro staff de profes, participar de talleres, alquilar el espacio nuestro mail:
@@ -117,59 +201,6 @@
   </div>
 
 
-    
-<!--  cart modal  -->
-<div class="cart-modal-overlay">
-  <div class="cart-modal">
-    <i id="close-btn" class="fas fa-times"></i>
-      <h1 class="cart-is-empty">El carrito esta vacio</h1>
-    
-      <div class="product-rows">
-      </div>
-      <div class="total">
-        <h1 class="cart-total">TOTAL</h1>
-          <span class="total-price">$0</span>
-            <button class="purchasebtn">COMPRAR</button>
-      </div>
-    </div>
-  </div>
-
-<!--   end of cart modal -->
-<a class="cart-btn">
-<i id="cart" class="fas fa-shopping-cart"></i>
-<span class ="cart-quantity">0</span>
-</a>
-
-
-<!--  products  -->
-
-<div class="items-container">
-<div class="card-1 card" id="item1">
-
-<img class="product-image" src="../imagenes/gim1.png" alt="">
-<h3>BIKINI DISEÑO</h3> 
-<button class="add-to-cart">Comprar</button>
-<span class="product-price">$1395</span>
-</div>
-<div class="card-2 card" id="item2">
-
-<img class="product-image" src="../imagenes/gim1.png" alt="">
-<h3>BIKINI </h3>
-<button class="add-to-cart">Comprar</button>
-<span class="product-price">$1175</span>
-</div>
-<div class="card-3 card" id="item3">
-
-<img class="product-image" src="../imagenes/gim1.png" alt="">
-<h3>BIKINI NEGRA</h3>
-<button class="add-to-cart">Comprar</button>
-<span class="product-price">$1150</span>
-</div>
-</div>
-
-
-
-<!--  end of products  -->
 
 
 
