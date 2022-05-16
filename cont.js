@@ -1,11 +1,9 @@
-class GuardarRegistro{
-    constructor(nomb, anios, email,escribir){
-        this.nomb=nomb;
-        this.anios=anios;
-        this.email=email;
-        this.escribir=escribir;
-    }
-}
+const botonContactar=document.getElementById("botonContactar");
+const eform=document.getElementById("eform");
+
+botonContactar.addEventListener("click", ()=>{
+    guardarContacto();
+})
 
 let arrayContacto=[];
 
@@ -42,44 +40,11 @@ const guardarContacto = () => {
 };
 
 
-const botonContactar=document.getElementById("botonContactar");
-botonContactar.addEventListener("click", ()=>{
-    guardarContacto();
-})
+
   
-
-
-// INICIAR SESION
-class GuardarInicio{
-    constructor(identificarmail,contrasenia,botonInicio){
-        this.identificarmail=identificarmail;
-        this.contrasenia=contrasenia;
-  
-    }
-}
-
-let inicio=[];
-const guardarInicio=()=>{
-    formularioInicio.addEventListener("submit",function(e){
-        e.preventDefault();
-    let identificarmail=document.getElementById("datoIngreso").value;
-    let contrasenia=document.getElementById("numero").value;
-  
-
-    fetch("prueba.txt")
-    .then(result=> console.log(result))
-    .catch(error=>console.log(error))
-})
-}
-const botonInicio=document.getElementById("botonInicio");
-botonInicio.addEventListener("click", ()=>{
-    guardarInicio();
-})
-
 
 //SUSCRIBIRSE
-const eform=document.getElementById("eform");
-console.log("eform");
+
 eform.addEventListener("submit", function(e){
     //verificacion:
     e.preventDefault();
