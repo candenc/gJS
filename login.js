@@ -16,38 +16,37 @@ document.addEventListener ('click', (e) => {
 })
 
 class GuardarRegistro{
-    constructor(nomb, anios, email,escribir){
+    constructor(nomb, email,contrasenia){
         this.nomb=nomb;
-        this.anios=anios;
         this.email=email;
-        this.escribir=escribir;
+        this.contrasenia=contrasenia;
     }
 }
 
 
 // INICIAR SESION
 class GuardarInicio{
-    constructor(identificarmail,contrasenia,botonInicio){
+    constructor(identificarmail,contrasenia){
         this.identificarmail=identificarmail;
         this.contrasenia=contrasenia;
   
     }
 }
 
-let iniciarSesion=[];
-const guardarInicio=()=>{
-    formularioInicio.addEventListener("submit",function(e){
-        e.preventDefault();
-    let identificarmail=document.getElementById("datoIngreso").value;
-    let contrasenia=document.getElementById("numero").value;
+// let iniciarSesion=[];
+// const guardarInicio=()=>{
+//     formularioInicio.addEventListener("submit",function(e){
+//         e.preventDefault();
+//     let identificarmail=document.getElementById("datoIngreso").value;
+//     let contrasenia=document.getElementById("numero").value;
   
 
-    fetch("prueba.txt")
-    .then(result=> console.log(result))
-    .catch(error=>console.log(error))
-})
-}
-botonInicio.addEventListener("click", ()=>{
-    guardarInicio();
-})
+//     fetch("prueba.txt")
+//     .then(result=> console.log(result))
+//     .catch(error=>console.log(error))
+// })
+// }
+// botonInicio.addEventListener("click", ()=>{
+//     guardarInicio();
+// })
 
