@@ -4,6 +4,21 @@ const botonRegistro= document.querySelector('.sign-up-btn');
 const inicio= document.querySelector('.sign-in');
 const registro= document.querySelector('.sign-up');
 
+const signupbutton=document.querySelector("#signupbutton");
+const signinbutton=document.querySelector("#signinbutton");
+
+signinbutton.addEventListener("click", iniciarSesion());
+
+function iniciarSesion () {
+    //capturo correo y contraseña
+    let ingCorreo="";
+    let ingContra="";
+    // let variableIngreso="";
+
+    ingCorreo=document.querySelector("#emaiil").value;
+    ingContra=document.querySelector("#contra").value;
+}
+
 //Llamado de botones:
 document.addEventListener ('click', (e) => {
     //¿Quién origina el llamado? 
