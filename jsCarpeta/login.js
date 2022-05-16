@@ -7,17 +7,6 @@ const registro= document.querySelector('.sign-up');
 const signupbutton=document.querySelector("#signupbutton");
 const signinbutton=document.querySelector("#signinbutton");
 
-signinbutton.addEventListener("click", iniciarSesion());
-
-function iniciarSesion () {
-    //capturo correo y contraseña
-    let ingCorreo="";
-    let ingContra="";
-    // let variableIngreso="";
-
-    ingCorreo=document.querySelector("#emaiil").value;
-    ingContra=document.querySelector("#contra").value;
-}
 
 //Llamado de botones:
 document.addEventListener ('click', (e) => {
@@ -29,40 +18,55 @@ document.addEventListener ('click', (e) => {
     }
 
 })
-//
-function listaDeUsuarios() {
-    const listaUsuarios=JSON. parse(localStorage.getItem("ListaUsuariosLs"));
-//Registros previos
-    if (listaUsuarios==null){
-        listaUsuarios= [
-            //ID, nombre y apellido, email, contraseña, fecha de nacimiento, rol
-            ["1", "Candela Campagnolo","candecampagnolo@outlook.com", "candela123", "25-09-99", "administrador"],
-            ["2", "Maria Turchetti","mari@outlook.com", "mariaT", "05-07-95","usuario"],
-            ["3", "Maria Turchetti","mari@outlook.com", "mariaT", "05-07-95","empleado"]
-        ]
-        
+
+document.addEventListener("click",(e) => {
+    GuardarRegistroClientes();
+})
+
+
+class GuardarRegClientes{
+    constructor(nombreC,emailC,edadC, contraC){
+        this.nombreC=nombreC;
+        this.emailC=emailC;
+        this.edadC=edadC;
+        this.contraC=contraC;
     }
-    return listaUsuarios;
 }
-//Recibir valores:
-function validarUsuario(correo,contrassenia){
-    let listaUsuarios = listaDeUsuarios();
-   //Variable booleana que me permite reccorrer la lista de acceso y validar:
-    let acceso=false; //si encuentra similitud, cambia a true
 
-    for (let i=0; i<listaUsuarios.length;i++){
-        //Recorro matriz
-        //Si el correo es igual a lo que hay en la lista de usuarios en posicion i.
-        //En posicion 3 está el correo y el posicion 4 está la contraseña:
-        if(correo==listaUsuarios[i][3] && contrassenia==listaUsuarios[i][4]){
-            acceso=true;
-            sessionStorage.setItem("activo",listaUsuarios[i][1]+"  "+ listaUsuarios[i][2]);
-            //Definiendo funcion: 
-            sessionStorage.setItem("rollUsuario", listaUsuarios[i][6]);
-            
-        }
+let registros=[
+  
 
-        }
-        return acceso;
- }
+];
+
+
+const GuardarRegistroClientes = () => {
+   
+    let nombreC =document.getElementById("nombreC").value;
+    let emailC =document.getElementById("emailC").value;
+    let edadC =document.getElementById("edadC").value;
+    let contraC =document.getElementById("contraC").value;
+
+    let nuevoregistro= new GuardarRegClientes(nombreC, emailC, edadC,contraC);
+    registros.push(nuevoregistro);
+           
+    localStorage.setItem("signupbutton",JSON.stringify(signupbutton));
+        
+    if( localStorage.getItem("listaUsuarios") !=null){
+        registros=JSON.localStorage.getItem("listaUsuarios");
+        registros.push(nuevoregistro);
+        localStorage.setItem("listaUsuarios", JSON.stringify(registros));}
+        else   {
+
+        registros.push(nuevoregistro);
+        localStorage.setItem("listaUsuarios",JSON.stringify(registros));
+    }
+    registros.push(nuevoregistro);
+    return nuevoregistro;
+    
+    
+};
+
+
+
+  
 

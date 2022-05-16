@@ -5,7 +5,6 @@ const eform=document.getElementById("eform");
 botonContactar.addEventListener("click", ()=>{
     guardarContacto();
 })
-
 class GuardarRegistro{
     constructor(nomb,anios, email,contrasenia){
         this.nomb=nomb;
