@@ -1,3 +1,4 @@
+//Uso de botones y guardar informacion mediante LS. 
 const botonContactar=document.getElementById("botonContactar");
 const eform=document.getElementById("eform");
 
@@ -28,7 +29,8 @@ const guardarContacto = () => {
     arrayContacto.push(nuevoContacto);
            
     localStorage.setItem("botonContactar",JSON.stringify(botonContactar));
-
+    
+    //Traer informacion con fetch:
     fetch("prueba2.txt")
     .then(response=>response.text())
     .catch(error=>console.log(error))
@@ -52,18 +54,3 @@ const guardarContacto = () => {
 
   
 
-//SUSCRIBIRSE
-
-eform.addEventListener("submit", function(e){
-    //verificacion:
-    e.preventDefault();
-    let mail=document.getElementById("mailSus").value;
-    const botonSus=document.getElementById("botonSus");
-    
-    
-    botonSus.addEventListener=()=>{
-        let suscribirse= {
-            mail:mail.value
-        }
-    }
-})
