@@ -15,13 +15,6 @@ document.addEventListener ('click', (e) => {
 
 })
 
-class GuardarRegistro{
-    constructor(nomb, email,contrasenia){
-        this.nomb=nomb;
-        this.email=email;
-        this.contrasenia=contrasenia;
-    }
-}
 
 
 // INICIAR SESION

@@ -5,6 +5,15 @@ botonContactar.addEventListener("click", ()=>{
     guardarContacto();
 })
 
+class GuardarRegistro{
+    constructor(nomb,anios, email,contrasenia){
+        this.nomb=nomb;
+        this.anios=anios;
+        this.email=email;
+        this.contrasenia=contrasenia;
+    }
+}
+
 let arrayContacto=[];
 
 
