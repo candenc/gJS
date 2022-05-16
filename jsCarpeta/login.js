@@ -51,30 +51,3 @@ function validarUsuario(correo,contrassenia){
         return acceso;
  }
 
-
-// // INICIAR SESION
-// class GuardarInicio{
-//     constructor(identificarmail,contrasenia){
-//         this.identificarmail=identificarmail;
-//         this.contrasenia=contrasenia;
-  
-//     }
-// }
-
-// let iniciarSesion=[];
-// const guardarInicio=()=>{
-//     formularioInicio.addEventListener("submit",function(e){
-//         e.preventDefault();
-//     let identificarmail=document.getElementById("datoIngreso").value;
-//     let contrasenia=document.getElementById("numero").value;
-  
-
-//     fetch("prueba.txt")
-//     .then(result=> console.log(result))
-//     .catch(error=>console.log(error))
-// })
-// }
-// botonInicio.addEventListener("click", ()=>{
-//     guardarInicio();
-// })
-
