@@ -1,7 +1,4 @@
 //Defino variables:
-
-
-
 //1. Le doy apertura  y cierre al carrito
 //2.Agregar elementos
 //3.Calcular total
@@ -81,6 +78,7 @@ function agregarElementos(prodId,prodName,price,imageSrc){
     //HTML en el carrito
     let cartRowItem = 
     `<div class="product-row" id="${prodId}>
+        <img class="cart-image" src="${imageSrc}">
        <h3> ${prodName} </h3>
        <span class="cart-price"> ${price} </span>
        <input class="product-quantity" type="number" value="1">
@@ -99,7 +97,7 @@ function agregarElementos(prodId,prodName,price,imageSrc){
 //4.Eliminar elementos: 
 function removeItem(e) {
     //Es necesario encontrar el elemento específico al que deseo eliminar.
-    btnClicked=e.target;
+    let btnClicked=e.target;
     //Buscamps el "boton abuelo"
     btnClicked.parentElement.parentElement.remove();
     updatePrice();
@@ -108,7 +106,7 @@ function removeItem(e) {
 //Cambiar cantidades:
 function cambiarCantidad(e){
     let cantidad = e.target.value;
-    if (isNaN(cantidad) || cantidad<=0){
+    if (isNaN(cantidad) || cantidad <= 0){
         cantidad=1;
     }
     updatePrice();
@@ -120,13 +118,13 @@ function updatePrice() {
     for (const producto of productRows){
         //Debo eliminar signo $ (replace): cambio un valor por otro. Me trae como informacion un "texto", debo transformar a numero mediante parse.
         let price=parseFloat(producto.querySelector(".cart-price").innerText.replace("$",""));
-        let cantidad= producto.querySelector("product-quantity").value;
-        total += price*cantidad;
+        let cantidad= producto.querySelector(".product-quantity").value;
+        total += price * cantidad;
     }
     //Agregar al carrito y hacerlo visible al usuario
-    document.querySelector(".total-price").innerText=$ + total;
+    document.querySelector(".total-price").innerText ="$" + total;
     //Conteo en carrito
-    document.querySelector(".cart-quantity").textContent=productRows.length;
+    document.querySelector(".cart-quantity").textContent= productRows.length;
 }
 
 
