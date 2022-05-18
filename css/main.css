@@ -428,23 +428,10 @@ input, textarea {
 
 .container-form {
   width: 90%;
-  height: 70vh;
+  height: 90vh;
   display: flex;
   justify-content: space-around;
   transition: all .5s ease-out; }
-
-.sign-in {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden; }
-
-.sign-in.active {
-  opacity: 1;
-  visibility: visible; }
-
-.sign-up.active {
-  opacity: 0;
-  visibility: hidden; }
 
 .welcome-back {
   display: flex;
@@ -452,8 +439,7 @@ input, textarea {
   text-align: center; }
 
 .message {
-  padding: 1rem;
-  color: black; }
+  padding: 1rem; }
 
 .message h2 {
   font-size: 1.7rem;
@@ -476,7 +462,7 @@ input, textarea {
   background-color: #6464f8; }
 
 .formul {
-  width: 400px;
+  width: 500px;
   padding: 1rem;
   margin: 2rem;
   background-color: #6014a7;
@@ -485,6 +471,9 @@ input, textarea {
 .create-account {
   padding: 2.7rem 0;
   font-size: 1.7rem; }
+
+.cuenta-gratis {
+  padding: 2rem 0; }
 
 .formul input {
   width: 70%;
@@ -497,11 +486,11 @@ input, textarea {
   text-align: center;
   outline: none;
   padding: .2rem 0;
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: white; }
 
-.formul input[type="button"] {
-  width: 60%;
+.signinbutton {
+  width: 100%;
   margin: auto;
   border: solid thin white;
   padding: .7rem;
@@ -512,3 +501,29 @@ input, textarea {
   font-size: .8rem;
   cursor: pointer;
   color: #222; }
+
+.signupbutton {
+  width: 100%;
+  margin: auto;
+  border: solid thin white;
+  padding: .7rem;
+  border-radius: 2rem;
+  background-color: white;
+  font-weight: 600;
+  margin-top: 3rem;
+  font-size: .8rem;
+  cursor: pointer;
+  color: #222; }
+
+.sign-in {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden; }
+
+.sign-in.active {
+  opacity: 1;
+  visibility: visible; }
+
+.sign-up.active {
+  opacity: 0;
+  visibility: hidden; }

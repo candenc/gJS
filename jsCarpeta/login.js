@@ -20,7 +20,7 @@ document.addEventListener ('click', (e) => {
 
 })
 
-document.addEventListener("click",(e) => {
+signupbutton.addEventListener("click",() => {
     GuardarRegistroClientes();
 })
 
