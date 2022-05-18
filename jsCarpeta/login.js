@@ -9,6 +9,7 @@ const signinbutton=document.querySelector("#signinbutton");
 
 
 //Llamado de botones:
+//Oscilar entre iniciar sesion/registrarse:
 document.addEventListener ('click', (e) => {
     //¿Quién origina el llamado? 
     if( e.target ==botonIniciar || e.target==botonRegistro){
@@ -33,10 +34,8 @@ class GuardarRegClientes{
     }
 }
 
-let registros=[
-  
-
-];
+//Array donde guardamos registros
+let registros=[];
 
 
 const GuardarRegistroClientes = () => {
@@ -46,10 +45,11 @@ const GuardarRegistroClientes = () => {
     let edadC =document.getElementById("edadC").value;
     let contraC =document.getElementById("contraC").value;
 
+    //A fin de generar nuevos ingresos:
     let nuevoregistro= new GuardarRegClientes(nombreC, emailC, edadC,contraC);
     registros.push(nuevoregistro);
            
-    localStorage.setItem("signupbutton",JSON.stringify(signupbutton));
+    localStorage.setItem("signupbutton", JSON.stringify(signupbutton));
         
     if( localStorage.getItem("listaUsuarios") !=null){
         registros=JSON.localStorage.getItem("listaUsuarios");
